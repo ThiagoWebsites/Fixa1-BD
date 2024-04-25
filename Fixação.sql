@@ -142,6 +142,8 @@ INSERT INTO produtos (nome, preco, descricao, quantidade_estoque) VALUES
 ('Lâmpada Inteligente Modelo 99', 40.00, '16 milhões de cores, Wi-Fi', 105),
 ('Máquina de Café Expresso Modelo 100', 110.00, 'Prepara bebidas com cápsulas', 75);
 
+-- LISTA 1
+
 SELECT *
 FROM produtos;
 
@@ -175,3 +177,32 @@ FROM produtos;
 SELECT  nome, preco, quantidade_estoque
 FROM produtos
 order by quantidade_estoque desc;
+
+-- LISTA 2
+
+SELECT COUNT(quantidade_estoque)
+FROM produtos;
+
+SELECT AVG(PRECO)
+FROM produtos;
+
+SELECT nome
+FROM produtos
+WHERE nome LIKE '%Modelo 20%';
+
+SELECT nome, preco, descricao
+FROM produtos
+where preco between 50 and 150;
+
+SELECT nome, preco
+FROM produtos
+order by preco asc
+limit 5;
+
+SELECT nome
+FROM produtos
+Having quantidade_estoque < 1;
+
+SELECT nome
+FROM produtos
+Having descricao
