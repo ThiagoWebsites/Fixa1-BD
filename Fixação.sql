@@ -205,4 +205,4 @@ Having quantidade_estoque < 1;
 
 SELECT nome
 FROM produtos
-Having descricao
+where descricao = '';
